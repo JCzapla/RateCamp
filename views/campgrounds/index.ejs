@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+<div class="container mt-4">
+     <header class="jumbotron">
+         <div class="container">
+             <h1><span class="glyphicon glyphicon-tent"></span> Welcome To RateCamp!</h1>
+             <p>View our hand-picked campgrounds from all over the world</p>
+             <p>
+                <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a>
+             </p>
+         </div>
+     </header>
+    <div class="row" style="display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(camp){ %>
+            <div class="col-md-3 col-sm-6 d-flex">
+                <div class="card">
+                    <img class="card-img-top flex-fill" src="<%= camp.image %>">
+                    <div class="card-body flex-fill">
+                        <h5 class="card-title"><%=camp.name%></h5>
+                        <a href="/campgrounds/<%= camp._id %>" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+    
+</div>
+<% include ../partials/footer %>
