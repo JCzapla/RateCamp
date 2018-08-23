@@ -13,11 +13,11 @@ var express             = require("express"),
     
 var commentRoutes       = require("./routes/comments"),
     campgroundRoutes    = require("./routes/campgrounds"),
-    authRoutes          = require("./routes/auth")    
+    authRoutes          = require("./routes/auth")   ; 
     
 //seedDB();   
 //mongoose.connect("mongodb://localhost/yelp_camp");
-mongoose.connect("mongodb://jczapla:r4t3c3mp@ds125392.mlab.com:25392/rate_camp")
+mongoose.connect("mongodb://jczapla:r4t3c3mpg@ds125392.mlab.com:25392/rate_camp");
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
