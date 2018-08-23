@@ -16,7 +16,8 @@ var commentRoutes       = require("./routes/comments"),
     authRoutes          = require("./routes/auth")    
     
 //seedDB();   
-mongoose.connect("mongodb://localhost/yelp_camp");
+//mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://jczapla:r4t3_c4mp@ds125392.mlab.com:25392/rate_camp")
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
